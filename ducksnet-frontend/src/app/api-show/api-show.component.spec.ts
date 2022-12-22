@@ -1,4 +1,8 @@
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { AppbarComponent } from '../appbar/appbar.component';
+import { DogAndCatComponent } from '../dog-and-cat/dog-and-cat.component';
 
 import { ApiShowComponent } from './api-show.component';
 
@@ -8,9 +12,11 @@ describe('ApiShowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ApiShowComponent ]
+      imports : [ HttpClientTestingModule, FormsModule ],
+      declarations: [ ApiShowComponent, DogAndCatComponent, AppbarComponent ]
     })
     .compileComponents();
+
 
     fixture = TestBed.createComponent(ApiShowComponent);
     component = fixture.componentInstance;

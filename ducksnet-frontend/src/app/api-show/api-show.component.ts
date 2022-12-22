@@ -1,6 +1,5 @@
-import { Component, NgModule } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { last } from 'rxjs';
 
 @Component({
   selector: 'app-api-show',

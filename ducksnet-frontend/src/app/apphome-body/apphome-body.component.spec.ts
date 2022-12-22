@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DogAndCatComponent } from '../dog-and-cat/dog-and-cat.component';
 
 import { ApphomeBodyComponent } from './apphome-body.component';
 
@@ -8,7 +9,7 @@ describe('ApphomeBodyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ApphomeBodyComponent ]
+      declarations: [ ApphomeBodyComponent, DogAndCatComponent ]
     })
     .compileComponents();
 
