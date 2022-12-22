@@ -14,7 +14,12 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
-
+.rounded-rectangle-second{
+  background: #EDDDD4;
+  border-radius: 25px;
+  margin: 0;
+  justify-content: center;
+}
 .rectangle-text{
   padding-left: 40%;
   padding-right: 30%;
