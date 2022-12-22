@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { DogAndCatComponent } from '../dog-and-cat/dog-and-cat.component';
 
 import { AppSignInBodyComponent } from './app-sign-in-body.component';
 
@@ -8,7 +9,7 @@ describe('AppSignInBodyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AppSignInBodyComponent ]
+      declarations: [ AppSignInBodyComponent, DogAndCatComponent ]
     })
     .compileComponents();
 
