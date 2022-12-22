@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v1
       - name: Test and Coverage
         run: npm run testcov
-        working-directory: ./ducknet-frontend
+        working-directory: ./ducksnet-frontend
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
