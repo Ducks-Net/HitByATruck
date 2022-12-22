@@ -15,10 +15,14 @@ jobs:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: Get node
         uses: actions/setup-node@v1
-      - name: Move to project directory
-        run: cd ./ducksnet-frontend
+        with:
+          node-version: 18
+      - name: npm install
+        run: npm install
+        working-directory: ./ducksnet-frontend
       - name: Test and Coverage
-        run: npm testcov
+        run: npm run testcov
+        working-directory: ./ducksnet-frontend
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
