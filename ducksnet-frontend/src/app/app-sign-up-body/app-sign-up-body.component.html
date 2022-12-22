@@ -8,28 +8,28 @@
         <div class="">
           <form>
             <div class="mb-3">
-              <input type="text" class="form-control" id="exampleInputFirstName" placeholder="First Name">
+              <input type="text" class="form-control" id="exampleInputFirstName" placeholder="First Name" (input)="onUpdateFirstName($event)">
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" id="exampleInputLastName"  placeholder="Last Name">
+              <input type="text" class="form-control" id="exampleInputLastName"  placeholder="Last Name" (input)="onUpdateLastName($event)">
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" id="exampleInputAddress" placeholder="Address">
+              <input type="text" class="form-control" id="exampleInputAddress" placeholder="Address" (input)="onUpdateAddress($event)">
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" id="exampleInputPhoneNumber" placeholder="Phone Number">
+              <input type="text" class="form-control" id="exampleInputPhoneNumber" placeholder="Phone Number" (input)="onUpdatePhoneNumber($event)">
             </div>
             <div class="mb-3">
-              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address">
+              <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address" (input)="onUpdateEmail($event)">
             </div>
             <div class="mb-3">
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" (input)="onUpdatePassword($event)">
             </div>
             <div class="mb-3">
-              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
+              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password" (input)="onUpdateConfirmPassword($event)">
             </div>
             <div class="mt-5 p-2 text-center">
-              <button type="submit" class="btn btn-primary ml-2 "
+              <button type="submit" class="btn btn-primary ml-2 " (click)="onSubmit()"
                 style="color:black; background-color:#EDDDD4; border-color: #EDDDD4;">SIGN ME UP
               </button>
             </div>
