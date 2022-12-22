@@ -18,7 +18,7 @@ jobs:
       - name: Move to project directory
         run: cd ./ducksnet-frontend
       - name: Test and Coverage
-        run: npm testcov
+        run: npm run testcov
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
