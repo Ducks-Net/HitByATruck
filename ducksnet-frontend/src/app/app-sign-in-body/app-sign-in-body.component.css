@@ -1,0 +1,30 @@
+.full-height {
+  height: 100%;
+  background: #EDDDD4;
+}
+
+.rounded-rectangle{
+  background: #D9C5B2;
+  height: 70%;
+  width: 90%;
+  border-radius: 25px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.rounded-rectangle-second{
+  background: #EDDDD4;
+  border-radius: 25px;
+  margin: 0;
+  justify-content: center;
+}
+.rectangle-text{
+  padding-left: 40%;
+  padding-right: 30%;
+  padding-top: 4%;
+  color: #197278;
+  font-size: large;
+}
+

@@ -16,10 +16,13 @@ import { ApphomeBodyComponent } from './apphome-body/apphome-body.component';
 import { AppSignUpComponent } from './app-sign-up/app-sign-up.component';
 import { DogAndCatComponent } from './dog-and-cat/dog-and-cat.component';
 import { AppSignUpBodyComponent } from './app-sign-up-body/app-sign-up-body.component';
+import { AppSignInComponent } from './app-sign-in/app-sign-in.component';
+import { AppSignInBodyComponent } from './app-sign-in-body/app-sign-in-body.component';
 
 const appRoutes: Routes = [
   { path: '', component: ApphomeComponent },
   { path: 'sign-up', component: AppSignUpComponent},
+  { path: 'sign-in', component: AppSignInComponent},
   { path: 'api-show', component: ApiShowComponent}
 
 ];
@@ -33,7 +36,9 @@ const appRoutes: Routes = [
     ApphomeBodyComponent,
     AppSignUpComponent,
     DogAndCatComponent,
-    AppSignUpBodyComponent
+    AppSignUpBodyComponent,
+    AppSignInComponent,
+    AppSignInBodyComponent
   ],
   imports: [
     BrowserModule,
