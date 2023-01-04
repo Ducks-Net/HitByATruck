@@ -1,0 +1,14 @@
+.full-height {
+  height: 100%;
+  background: #EDDDD4;
+}
+
+.container-main {
+  border-radius: 30px;
+  height: 75vh;
+  width: 90vw;
+  background-color: #D9C5B2;
+  padding: 2%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
