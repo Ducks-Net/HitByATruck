@@ -20,13 +20,16 @@ import { AppSignInComponent } from './app-sign-in/app-sign-in.component';
 import { AppSignInBodyComponent } from './app-sign-in-body/app-sign-in-body.component';
 import { AppClinicsComponent } from './app-clinics/app-clinics.component';
 import { AppClinicsBodyComponent } from './app-clinics-body/app-clinics-body.component';
+import { AppVetClinicComponent } from './app-vet-clinic/app-vet-clinic.component';
+import { AppVetClinicBodyComponent } from './app-vet-clinic-body/app-vet-clinic-body.component';
 
 const appRoutes: Routes = [
   { path: '', component: ApphomeComponent },
   { path: 'sign-up', component: AppSignUpComponent},
   { path: 'sign-in', component: AppSignInComponent},
   { path: 'api-show', component: ApiShowComponent},
-  { path: 'clinics', component: AppClinicsComponent}
+  { path: 'clinics', component: AppClinicsComponent},
+  { path: 'vet-clinic', component: AppVetClinicComponent}
 
 ];
 
@@ -43,7 +46,9 @@ const appRoutes: Routes = [
     AppSignInComponent,
     AppSignInBodyComponent,
     AppClinicsComponent,
-    AppClinicsBodyComponent
+    AppClinicsBodyComponent,
+    AppVetClinicComponent,
+    AppVetClinicBodyComponent
   ],
   imports: [
     BrowserModule,
