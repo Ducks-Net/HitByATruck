@@ -4,6 +4,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table'
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatSelectModule } from '@angular/material/select';
 
 import { ApiShowComponent } from './api-show/api-show.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -26,6 +28,8 @@ import { AppHomepageComponent } from './app-homepage/app-homepage.component';
 import { AppHomepageBodyComponent } from './app-homepage-body/app-homepage-body.component';
 import { AppUpcomingAppointmentComponent } from './app-upcoming-appointment/app-upcoming-appointment.component';
 import { AppUpcomingAppointmentBodyComponent } from './app-upcoming-appointment-body/app-upcoming-appointment-body.component';
+import { AppMakeAppointmentComponent } from './app-make-appointment/app-make-appointment.component';
+import { AppMakeAppointmentBodyComponent } from './app-make-appointment-body/app-make-appointment-body.component';
 
 const appRoutes: Routes = [
   { path: '', component: ApphomeComponent },
@@ -35,7 +39,8 @@ const appRoutes: Routes = [
   { path: 'clinics', component: AppClinicsComponent},
   { path: 'vet-clinic', component: AppVetClinicComponent},
   { path: 'homepage', component: AppHomepageComponent},
-  { path: 'upcoming-appointment', component: AppUpcomingAppointmentComponent}
+  { path: 'upcoming-appointment', component: AppUpcomingAppointmentComponent},
+  { path: 'make-appointment', component: AppMakeAppointmentComponent}
 
 ];
 
@@ -58,7 +63,9 @@ const appRoutes: Routes = [
     AppHomepageComponent,
     AppHomepageBodyComponent,
     AppUpcomingAppointmentComponent,
-    AppUpcomingAppointmentBodyComponent
+    AppUpcomingAppointmentBodyComponent,
+    AppMakeAppointmentComponent,
+    AppMakeAppointmentBodyComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +75,7 @@ const appRoutes: Routes = [
     MatTableModule,
     FormsModule,
     MatFormFieldModule,
+    MatSelectModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
