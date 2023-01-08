@@ -1,0 +1,35 @@
+.full-height {
+  height: 100%;
+  background: #EDDDD4;
+}
+
+.container-main {
+  border-radius: 30px;
+  height: 78vh;
+  width: 90vw;
+  max-width: 90vw;
+  max-height: 78vh;
+  background-color: #D9C5B2;
+  padding: 2%;
+  margin: 0 auto;
+  margin-top: 2%;
+  overflow: auto;
+}
+
+.container-second {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.button-item-container {
+  margin-top: 1%;
+  padding: 1%;
+  text-align: center;
+  height: 10vh;
+  width: 100vw;
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  background-color: #EDDDD4;
+  color: #283D3B;
+  border-radius: 20px;
+}

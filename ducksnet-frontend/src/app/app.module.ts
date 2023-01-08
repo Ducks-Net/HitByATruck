@@ -22,6 +22,10 @@ import { AppClinicsComponent } from './app-clinics/app-clinics.component';
 import { AppClinicsBodyComponent } from './app-clinics-body/app-clinics-body.component';
 import { AppVetClinicComponent } from './app-vet-clinic/app-vet-clinic.component';
 import { AppVetClinicBodyComponent } from './app-vet-clinic-body/app-vet-clinic-body.component';
+import { AppHomepageComponent } from './app-homepage/app-homepage.component';
+import { AppHomepageBodyComponent } from './app-homepage-body/app-homepage-body.component';
+import { AppUpcomingAppointmentComponent } from './app-upcoming-appointment/app-upcoming-appointment.component';
+import { AppUpcomingAppointmentBodyComponent } from './app-upcoming-appointment-body/app-upcoming-appointment-body.component';
 
 const appRoutes: Routes = [
   { path: '', component: ApphomeComponent },
@@ -29,7 +33,9 @@ const appRoutes: Routes = [
   { path: 'sign-in', component: AppSignInComponent},
   { path: 'api-show', component: ApiShowComponent},
   { path: 'clinics', component: AppClinicsComponent},
-  { path: 'vet-clinic', component: AppVetClinicComponent}
+  { path: 'vet-clinic', component: AppVetClinicComponent},
+  { path: 'homepage', component: AppHomepageComponent},
+  { path: 'upcoming-appointment', component: AppUpcomingAppointmentComponent}
 
 ];
 
@@ -48,7 +54,11 @@ const appRoutes: Routes = [
     AppClinicsComponent,
     AppClinicsBodyComponent,
     AppVetClinicComponent,
-    AppVetClinicBodyComponent
+    AppVetClinicBodyComponent,
+    AppHomepageComponent,
+    AppHomepageBodyComponent,
+    AppUpcomingAppointmentComponent,
+    AppUpcomingAppointmentBodyComponent
   ],
   imports: [
     BrowserModule,
