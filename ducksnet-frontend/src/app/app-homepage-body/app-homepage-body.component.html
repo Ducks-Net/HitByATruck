@@ -2,7 +2,7 @@
   <div class="container" style="padding: 1%;"></div>
   <div class="container-main">
     <img src="/assets/profile.png" width="150vw" height="150vw" alt="" style="display: block; margin: auto;">
-    <h1 class="text-center" style="font-size: 80px; font-family: 'Playfair Display', serif;"><strong>Hello, @user!</strong></h1>
+    <h1 class="text-center" style="font-size: 80px; font-family: 'Playfair Display', serif;"><strong>Hello, @{{user?.FirstName + '.' +  user?.LastName}}</strong></h1>
     <h2 class="text-center" style="color: #197278;font-size: 30px; font-family: 'Playfair Display', serif;"><strong>nice to see you there.</strong></h2>
     <div class="container-second">
       <button class="button-item-container">See Upcoming Appointments</button>

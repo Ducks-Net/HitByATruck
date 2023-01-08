@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { User } from '../shared/user';
+import { UserService } from '../shared/user.service';
 
 @Component({
   selector: 'app-app-homepage-body',
@@ -6,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app-homepage-body.component.css']
 })
 export class AppHomepageBodyComponent {
+  user: User | undefined;
+  constructor(private userService: UserService, private router: Router) {
+      this.user = this.userService.getLoggedUser();
+      console.log(this.user);
+   }
 
 }
