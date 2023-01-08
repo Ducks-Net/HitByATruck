@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserLoginDto } from '../shared/user';
+import { UserService } from '../shared/user.service';
 
 @Component({
   selector: 'app-app-sign-in-body',
@@ -8,6 +11,9 @@ import { Component } from '@angular/core';
 export class AppSignInBodyComponent {
   email:string = '';
   password:string = '';
+
+  constructor(private userService: UserService, private router: Router) { }
+
   onUpdateEmail(newEmail: Event)
   {
     this.email = (<HTMLInputElement>newEmail.target).value;
@@ -17,9 +23,16 @@ export class AppSignInBodyComponent {
   {
     this.password = (<HTMLInputElement>newPassword.target).value;
   }
-  onSubmit()
+  async onSubmit()
   {
-    console.log(this.email);
-    console.log(this.password);
+    var dto: UserLoginDto = {
+      Email: this.email,
+      Password: this.password
+    }
+
+    if( await this.userService.loginUser(dto) ) {
+      this.router.navigate(['/homepage']);
+    }
+
   }
 }
