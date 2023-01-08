@@ -19,4 +19,19 @@ export class AppMakeAppointmentBodyComponent {
     { name: 'Fish' },
     { name: 'Bird' },
   ];
+  cages = [
+    { name: 'Yes' },
+    { name: 'No' },
+  ];
+  times = [
+    { name: '9:00 AM' },
+    { name: '10:00 AM' },
+    { name: '11:00 AM' },
+    { name: '12:00 PM' },
+    { name: '1:00 PM' },
+    { name: '2:00 PM' },
+    { name: '3:00 PM' },
+    { name: '4:00 PM' },
+    { name: '5:00 PM' },
+  ]
 }

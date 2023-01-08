@@ -1,24 +1,16 @@
 <div class="full-height">
   <div class="container" style="padding: 2%;"> </div>
   <div class="container-main overflow-auto">
-    <h1 class="text-center" style="padding-top:2%; font-size: 50px;"><strong>Veterinary Clinic Name</strong></h1>
+    <h1 class="text-center" style="padding-top:2%; font-size: 50px;"><strong>BOOK AN APPOINTMENT NOW!</strong></h1>
     <div class="row">
       <div class="col-md-4">
         <div class="container">
           <div class="row">
             <div class="lin-md-4">
-              <div class="container" style="padding-top: 8%;">
-                <h1 class="text-left" style="color: #197278;">YOUR LOCATION:</h1>
-                <div class="container-content-small">
-                  <input type="text" class="form-control" style="background-color: #EDDDD4; border: none;" id="exampleInputLastName"  placeholder="Location" (input)="onUpdateLocation($event)">
-                </div>
-              </div>
-            </div>
-            <div class="lin-md-4">
-              <div class="container" style="padding-top: 8%;">
-                <h1 class="text-left" style="color: #197278;">YOUR PET:</h1>
-                <mat-form-field appearance="fill" >
-                  <mat-select [(value)]="selected" class="slide-down-enter">
+              <div class="container " style="padding-top: 8%;" >
+                <h1 class="text-left" style="color: #197278;">Your pet:</h1>
+                <mat-form-field  appearance="fill" style="width: 25vw; margin: 0; padding: 0;" >
+                  <mat-select [(value)]="selected" style="margin: 0; padding: 0;">
                     <mat-option *ngFor="let pet of pets" [value]="pet">
                       {{pet.name}}
                     </mat-option>
@@ -27,11 +19,15 @@
               </div>
             </div>
             <div class="lin-md-4">
-              <div class="container" style="padding-top: 8%;">
-                <h1 class="text-left" style="color: #197278;">CITY:</h1>
-                <div class="container-content-small">
-                  <h3>IASI, ROMANIA</h3>
-                </div>
+              <div class="container " style="padding-top: 8%;" >
+                <h1 class="text-left" style="color: #197278;">Rrent cage?</h1>
+                <mat-form-field  appearance="fill" style="width: 25vw; margin: 0; padding: 0;" >
+                  <mat-select [(value)]="selected" style="margin: 0; padding: 0;">
+                    <mat-option *ngFor="let cage of cages" [value]="cage">
+                      {{cage.name}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
               </div>
             </div>
           </div>
@@ -39,8 +35,19 @@
       </div>
       <div class="col-md-4">
         <div class="container" style="padding: 2%;">
-          <div class="container" style="padding: 18%;"> </div>
-          <img src="/assets/rata.png" width="40%" height="70%" alt="" style="display: block; margin: auto;">
+          <div class="lin-md-4">
+            <div class="container " style="padding-top: 6%;" >
+              <h1 class="text-left" style="color: #197278;">Timeslot</h1>
+              <mat-form-field  appearance="fill" style="width: 25vw; margin: 0; padding: 0;" >
+                <mat-select [(value)]="selected" style="margin: 0; padding: 0;">
+                  <mat-option *ngFor="let time of times" [value]="time">
+                    {{time.name}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <img src="/assets/rabbit.png" width="40%" height="70%" alt="" style="display: block; margin: auto;">
           <div style="text-align: center">
             <button type="button" class="btn btn-primary"
               style="border: 0px;font-size: 25px; background-color: #AC9689; width: 15vw;">Book
@@ -49,21 +56,33 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="container" style="padding-top: 8%;">
-          <h1 class="text-left" style="color: #197278;">EMPLOYEES:</h1>
-          <div class="container-content-big">
-            <h3>IASI, ROMANIA</h3>
-            <h3>IASI, ROMANIA</h3>
-            <h3>IASI, ROMANIAROMANIAROMANIAROMANIA</h3>
-            <h3>IASI, ROMANIAROMANIAROMANIAROMANIA</h3>
+        <div class="container" style="padding-top: 2%;">
+          <div class="lin-md-4">
+            <div class="container " style="padding-top: 6%;" >
+              <h1 class="text-left" style="color: #197278;">Appointment Type</h1>
+              <mat-form-field  appearance="fill" style="width: 25vw; margin: 0; padding: 0;" >
+                <mat-select [(value)]="selected" style="margin: 0; padding: 0;">
+                  <mat-option *ngFor="let time of times" [value]="time">
+                    {{time.name}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="lin-md-4">
+            <div class="container " style="padding-top: 8%;" >
+              <h1 class="text-left" style="color: #197278;"> Clinics from your location</h1>
+              <mat-form-field  appearance="fill" style="width: 25vw; margin: 0; padding: 0;" >
+                <mat-select [(value)]="selected" style="margin: 0; padding: 0;">
+                  <mat-option *ngFor="let time of times" [value]="time">
+                    {{time.name}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
           </div>
         </div>
-        <div class="container" style="padding-top: 8%;">
-          <h1 class="text-left" style="color: #197278;">HISTORY WITH THIS CLINIC:</h1>
-          <div class="container-content-big">
-            <h3>IASI, ROMANIA</h3>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>

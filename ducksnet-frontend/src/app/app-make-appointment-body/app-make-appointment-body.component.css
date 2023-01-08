@@ -14,9 +14,13 @@
   margin: 0 auto;
   margin-top: 2%;
 }
-.slide-down-enter {
-  background-color: #EDDDD4;
+
+.mat-form-field {
+  padding: 0px;
+  box-sizing: border-box;
 }
+
+
 .container-content-small{
   border-radius: 10px;
   background-color: #EDDDD4;
