@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserCreateDto } from '../shared/user';
+import { UserService } from '../shared/user.service';
 
 @Component({
   selector: 'app-app-sign-up-body',
@@ -13,6 +16,8 @@ export class AppSignUpBodyComponent {
   lastName:string = '';
   address:string = '';
   phoneNumber:string = '';
+
+  constructor(private userService: UserService, private router: Router) { }
 
   onUpdateEmail(newEmail: Event)
   {
@@ -45,11 +50,23 @@ export class AppSignUpBodyComponent {
   }
   onSubmit()
   {
-    console.log(this.email);
-    console.log(this.password);
-    console.log(this.confirmPassword);
-    console.log(this.firstName);
-    console.log(this.lastName);
-    console.log(this.address);
+    var dto: UserCreateDto = {
+      FirstName: this.firstName,
+      LastName: this.lastName,
+      Address: this.address,
+      PhoneNumber: this.phoneNumber,
+      Email: this.email,
+      Password: this.password,
+    };
+
+    this.userService.registerUser(dto).subscribe(
+      (data: any) => {
+        if(data.isSuccess) {
+          this.router.navigate(['/sign-in']);
+        }
+      }
+    );
+
+
   }
 }
