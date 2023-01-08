@@ -9,6 +9,7 @@ import { User, UserCreateDto, UserLoginDto } from './user';
   providedIn: 'root'
 })
 export class UserService {
+  loggedUser: User | undefined = undefined;
   apiURL = StringsService.getBaseUrl() + 'api/v1/users';
   httpOptions = {
     headers: new HttpHeaders({
@@ -23,7 +24,6 @@ export class UserService {
   }
 
   public async loginUser(dto: UserLoginDto) {
-    var UserID = undefined;
     var users: any = undefined;
 
     var obs = this.httpClient
@@ -36,21 +36,25 @@ export class UserService {
       }
     );
 
-    console.log(dto);
-    console.log(users);
-
     for (var i = 0; i < users.length; i++) {
       if (users[i].email == dto.Email && users[i].password == dto.Password) {
-        UserID = users[i].id;
-        break;
+        this.loggedUser = {
+          Id: users[i].id,
+          FirstName: users[i].firstName,
+          LastName: users[i].lastName,
+          Email: users[i].email,
+          Password: users[i].password,
+          Address: users[i].address,
+          PhoneNumber: users[i].phoneNumber,
+        }
+        return true;
       }
     }
-    if (UserID == undefined) {
-      console.log('User not found');
-      return false;
-    }
-    console.log('User found');
-    return true;
+    return false;
+  }
+
+  public getLoggedUser() {
+    return this.loggedUser;
   }
 
   // Error handling
