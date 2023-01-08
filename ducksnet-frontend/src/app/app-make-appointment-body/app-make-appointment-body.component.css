@@ -14,7 +14,9 @@
   margin: 0 auto;
   margin-top: 2%;
 }
-
+.slide-down-enter {
+  background-color: #EDDDD4;
+}
 .container-content-small{
   border-radius: 10px;
   background-color: #EDDDD4;
@@ -23,7 +25,6 @@
   padding-left: 1%;
   padding-right: 1%;
   min-height: 7vh;
-
 }
 
 .container-content-big{

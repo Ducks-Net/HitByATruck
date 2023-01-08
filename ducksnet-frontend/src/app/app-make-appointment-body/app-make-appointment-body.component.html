@@ -10,16 +10,20 @@
               <div class="container" style="padding-top: 8%;">
                 <h1 class="text-left" style="color: #197278;">YOUR LOCATION:</h1>
                 <div class="container-content-small">
-                  <input type="text" class="form-control" style="background-color: #EDDDD4; border-width: 0px;" id="exampleInputLastName"  placeholder="Location" (input)="onUpdateLocation($event)">
+                  <input type="text" class="form-control" style="background-color: #EDDDD4; border: none;" id="exampleInputLastName"  placeholder="Location" (input)="onUpdateLocation($event)">
                 </div>
               </div>
             </div>
             <div class="lin-md-4">
               <div class="container" style="padding-top: 8%;">
-                <h1 class="text-left" style="color: #197278;">ANIMAL CAPACITY:</h1>
-                <div class="container-content-small">
-                  <h3>10 AVAILABLE PLACES</h3>
-                </div>
+                <h1 class="text-left" style="color: #197278;">YOUR PET:</h1>
+                <mat-form-field appearance="fill" >
+                  <mat-select [(value)]="selected" class="slide-down-enter">
+                    <mat-option *ngFor="let pet of pets" [value]="pet">
+                      {{pet.name}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
               </div>
             </div>
             <div class="lin-md-4">

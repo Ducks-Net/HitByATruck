@@ -13,4 +13,10 @@ export class AppMakeAppointmentBodyComponent {
   {
     this.location = (<HTMLInputElement>newLocation.target).value;
   }
+  pets = [
+    { name: 'Cat' },
+    { name: 'Dog' },
+    { name: 'Fish' },
+    { name: 'Bird' },
+  ];
 }
