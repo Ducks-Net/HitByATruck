@@ -1,0 +1,64 @@
+<div class="full-height">
+  <div class="container" style="padding: 2%;"> </div>
+  <div class="container-main overflow-auto">
+    <h1 class="text-center" style="padding-top:2%; font-size: 50px;"><strong>BOOK AN APPOINTMENT NOW!</strong></h1>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="container">
+          <div class="row">
+            <div class="lin-md-4">
+              <div class="container " style="padding-top: 8%;" >
+                <h1 class="text-left" style="color: #197278;">Your pet:</h1>
+                <input type="text" class="form-control" id="exampleInputLastName"  placeholder="Pet Name" (input)="onUpdateName($event)">
+              </div>
+            </div>
+            <div class="lin-md-4">
+              <div class="container " style="padding-top: 8%;" >
+                <h1 class="text-left" style="color: #197278;">Species:</h1>
+                <input type="text" class="form-control" id="exampleInputLastName"  placeholder="Species" (input)="onUpdateSpecies($event)">
+              </div>
+            </div>
+            <div class="lin-md-4">
+              <div class="container " style="padding-top: 8%;" >
+                <h1 class="text-left" style="color: #197278;">Breed:</h1>
+                <input type="text" class="form-control" id="exampleInputLastName"  placeholder="Breed" (input)="onUpdateBreed($event)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="container" style="padding: 2%;">
+          <div class="lin-md-4">
+            <div class="container " style="padding-top: 6%;" >
+              <h1 class="text-left" style="color: #197278;">Choose Size</h1>
+              <mat-form-field  appearance="fill" style="width: 25vw; margin: 0; padding: 0;" >
+                <mat-select [(value)]="selected" style="margin: 0; padding: 0;">
+                  <mat-option *ngFor="let time of pets" [value]="time">
+                    {{time.name}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="lin-md-4">
+            <div class="container " style="padding-top: 8%;" >
+              <h1 class="text-left" style="color: #197278;">Date of birth:</h1>
+              <input type="date">
+            </div>
+          </div>
+          <div style="text-align: center">
+            <div style="padding: 10%;"> </div>
+            <button type="button" class="btn btn-primary"
+              style="border: 0px;font-size: 25px; background-color: #AC9689; width: 15vw;">Book
+              your<br>appointment</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="/assets/monkey.png" width="90%" height="75%" alt="" style="display: block; margin: auto;">
+
+      </div>
+    </div>
+  </div>
+</div>
