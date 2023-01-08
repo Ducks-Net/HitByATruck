@@ -1,0 +1,78 @@
+.full-height {
+  height: 100%;
+  background: #EDDDD4;
+  font-family: 'Playfair Display', serif;
+}
+
+.container-main {
+  border-radius: 30px;
+  height: 80vh;
+  width: 90vw;
+  max-width: 90vw;
+  max-height: 80vh;
+  background-color: #D9C5B2;
+  padding: 2%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+.box {
+  height: 10vh;
+}
+
+.button-new-appointment {
+  vertical-align: middle;
+  height: 9vh;
+  width: 12vw;
+  background-color: #197278;
+  color: #EDDDD4;
+  font-size: 25px;
+  border-radius: 10px;
+}
+.button-see-details {
+  vertical-align: middle;
+  margin-top: 9vh;
+  float: right;
+  margin-right: 6vw;
+  height: 6vh;
+  width: 12vw;
+  background-color: #85796D;
+  color: #EDDDD4;
+  font-size: 25px;
+  border-radius: 20px;
+}
+
+.container-appointments{
+  margin-top: 10vh;
+  height: 50vh;
+  width: 100%;
+  overflow: auto;
+  background-color: #EDDDD4;
+  border-radius: 20px;
+}
+
+.container-appointments-item{
+  height: 25vh;
+  background-color: #D9C5B2;
+  border-radius: 20px;
+  margin-top: 1vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  margin-bottom: 1vh;
+  padding: 1vh;
+}
+
+.title-appointment{
+  font-size: 40px;
+  color: #197278;
+  margin-left: 2vw;
+  float: left;
+}
+.info-appoinment{
+  clear: both;
+  font-size: 25px;
+  color: #197278;
+  margin-bottom: 1vh;
+  margin-left: 2vw;
+  float: left;
+}

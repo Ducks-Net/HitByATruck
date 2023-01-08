@@ -30,6 +30,8 @@ import { AppUpcomingAppointmentComponent } from './app-upcoming-appointment/app-
 import { AppUpcomingAppointmentBodyComponent } from './app-upcoming-appointment-body/app-upcoming-appointment-body.component';
 import { AppMakeAppointmentComponent } from './app-make-appointment/app-make-appointment.component';
 import { AppMakeAppointmentBodyComponent } from './app-make-appointment-body/app-make-appointment-body.component';
+import { MyPetsComponent } from './my-pets/my-pets.component';
+import { MyPetsBodyComponent } from './my-pets-body/my-pets-body.component';
 
 const appRoutes: Routes = [
   { path: '', component: ApphomeComponent },
@@ -40,7 +42,8 @@ const appRoutes: Routes = [
   { path: 'vet-clinic', component: AppVetClinicComponent},
   { path: 'homepage', component: AppHomepageComponent},
   { path: 'upcoming-appointment', component: AppUpcomingAppointmentComponent},
-  { path: 'make-appointment', component: AppMakeAppointmentComponent}
+  { path: 'make-appointment', component: AppMakeAppointmentComponent},
+  { path: 'my-pets', component: MyPetsComponent}
 
 ];
 
@@ -65,7 +68,9 @@ const appRoutes: Routes = [
     AppUpcomingAppointmentComponent,
     AppUpcomingAppointmentBodyComponent,
     AppMakeAppointmentComponent,
-    AppMakeAppointmentBodyComponent
+    AppMakeAppointmentBodyComponent,
+    MyPetsComponent,
+    MyPetsBodyComponent
   ],
   imports: [
     BrowserModule,
