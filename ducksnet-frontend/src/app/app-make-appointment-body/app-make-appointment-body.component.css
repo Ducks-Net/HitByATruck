@@ -1,0 +1,39 @@
+.full-height {
+  height: 100%;
+  background: #EDDDD4;
+  font-family: 'Playfair Display', serif;
+}
+.container-main {
+  border-radius: 30px;
+  height: 75vh;
+  width: 90vw;
+  max-width: 90vw;
+  max-height: 75vh;
+  background-color: #D9C5B2;
+  padding: 2%;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+.slide-down-enter {
+  background-color: #EDDDD4;
+}
+.container-content-small{
+  border-radius: 10px;
+  background-color: #EDDDD4;
+  display: flex;
+  align-items: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  min-height: 7vh;
+}
+
+.container-content-big{
+  border-radius: 10px;
+  background-color: #EDDDD4;
+  align-items: center;
+  padding-left: 1%;
+  padding-right: 1%;
+  height: 15vh;
+  width: 100%;
+  overflow: auto;
+}
