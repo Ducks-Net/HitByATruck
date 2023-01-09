@@ -34,6 +34,7 @@ import { MyPetsComponent } from './my-pets/my-pets.component';
 import { MyPetsBodyComponent } from './my-pets-body/my-pets-body.component';
 import { PetInfoComponent } from './pet-info/pet-info.component';
 import { PetInfoBodyComponent } from './pet-info-body/pet-info-body.component';
+import { AppBarLoggedComponent } from './app-bar-logged/app-bar-logged.component';
 
 const appRoutes: Routes = [
   { path: '', component: ApphomeComponent },
@@ -75,7 +76,8 @@ const appRoutes: Routes = [
     MyPetsComponent,
     MyPetsBodyComponent,
     PetInfoComponent,
-    PetInfoBodyComponent
+    PetInfoBodyComponent,
+    AppBarLoggedComponent
   ],
   imports: [
     BrowserModule,
