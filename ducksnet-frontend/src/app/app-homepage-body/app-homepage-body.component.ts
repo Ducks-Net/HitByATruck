@@ -15,4 +15,12 @@ export class AppHomepageBodyComponent {
       console.log(this.user);
    }
 
+  public goToMyPets() {
+    this.router.navigate(['/my-pets']);
+  }
+
+  public goToUpcomingAppointments() {
+    this.router.navigate(['/upcoming-appointment']);
+  }
+
 }

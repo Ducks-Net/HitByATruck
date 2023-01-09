@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { PetCreateDto } from '../shared/pet';
+import { PetService } from '../shared/pet.service';
+import { UserService } from '../shared/user.service';
 
 @Component({
   selector: 'app-pet-info-body',
@@ -6,11 +10,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./pet-info-body.component.css']
 })
 export class PetInfoBodyComponent {
-  selected = 'option2';
+  selected = '';
   name: string = '';
   species: string = '';
   breed: string = '';
   dateOfBirth: string = '';
+
+  constructor(private userService: UserService, private petService: PetService, private rotuer: Router) { }
 
   onUpdateName(newName: Event) {
     this.name = (<HTMLInputElement>newName.target).value;
@@ -24,9 +30,31 @@ export class PetInfoBodyComponent {
     this.breed = (<HTMLInputElement>newBreed.target).value;
   }
 
+  onUpdateDateOfBirth(newDateOfBirth: Event) {
+    this.dateOfBirth = (<HTMLInputElement>newDateOfBirth.target).value;
+  }
+
+  public createPet() {
+    let dto: PetCreateDto = {
+      Name: this.name,
+      Species: this.species,
+      Breed: this.breed,
+      DateOfBirth: this.dateOfBirth,
+      OwnerId: this.userService.getLoggedUser()!.Id,
+      Size: this.selected
+    }
+    console.log(dto);
+
+    this.petService.createPet(dto).forEach(
+      () => {
+        this.rotuer.navigate(['/my-pets']);
+      }
+    );
+  }
+
   pets = [
-    { name: 'small' },
-    { name: 'medium' },
-    { name: 'big' },
+    'Small',
+    'Medium',
+    'Large'
   ];
 }

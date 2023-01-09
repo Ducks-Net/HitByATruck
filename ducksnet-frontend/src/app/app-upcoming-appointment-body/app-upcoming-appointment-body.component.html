@@ -6,57 +6,14 @@
         <span style="font-size: 10vh;vertical-align: middle; padding-right: 10vw;"><strong>Your Last Appointments</strong></span>
         <button class="button-new-appointment" >BOOK NEW<br>APPOINTMENT</button>
       </div>
-      <div class="container-appointments">
+      <div class="container-appointments" *ngFor="let appointment of appointments">
         <div class="container-appointments-item">
           <!--create an row of 2 elements-->
           <div class="row">
             <div class="col-9">
-              <span class="title-appointment"><strong>Appointment ID idNumber</strong></span>
               <span class="info-appoinment">Location: Veterinary Clinic Name</span>
-              <span class="info-appoinment">Timestamp: 10:00 AM - 12:00 AM</span>
-              <span class="info-appoinment">Appointment Type: Consultation</span>
-            </div>
-            <div class="col-3">
-              <button class="button-see-details" >See details</button>
-            </div>
-          </div>
-        </div>
-        <div class="container-appointments-item">
-          <!--create an row of 2 elements-->
-          <div class="row">
-            <div class="col-9">
-              <span class="title-appointment"><strong>Appointment ID idNumber</strong></span>
-              <span class="info-appoinment">Location: Veterinary Clinic Name</span>
-              <span class="info-appoinment">Timestamp: 10:00 AM - 12:00 AM</span>
-              <span class="info-appoinment">Appointment Type: Consultation</span>
-            </div>
-            <div class="col-3">
-              <button class="button-see-details" >See details</button>
-            </div>
-          </div>
-        </div>
-        <div class="container-appointments-item">
-          <!--create an row of 2 elements-->
-          <div class="row">
-            <div class="col-9">
-              <span class="title-appointment"><strong>Appointment ID idNumber</strong></span>
-              <span class="info-appoinment">Location: Veterinary Clinic Name</span>
-              <span class="info-appoinment">Timestamp: 10:00 AM - 12:00 AM</span>
-              <span class="info-appoinment">Appointment Type: Consultation</span>
-            </div>
-            <div class="col-3">
-              <button class="button-see-details" >See details</button>
-            </div>
-          </div>
-        </div>
-        <div class="container-appointments-item">
-          <!--create an row of 2 elements-->
-          <div class="row">
-            <div class="col-9">
-              <span class="title-appointment"><strong>Appointment ID idNumber</strong></span>
-              <span class="info-appoinment">Location: Veterinary Clinic Name</span>
-              <span class="info-appoinment">Timestamp: 10:00 AM - 12:00 AM</span>
-              <span class="info-appoinment">Appointment Type: Consultation</span>
+              <span class="info-appoinment">Timestamp: {{appointment.StartTime}} - {{appointment.EndTime}}</span>
+              <span class="info-appoinment">Appointment Type: {{appointment.Type.name}}</span>
             </div>
             <div class="col-3">
               <button class="button-see-details" >See details</button>

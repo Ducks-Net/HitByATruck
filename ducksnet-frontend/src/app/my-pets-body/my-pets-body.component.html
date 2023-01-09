@@ -4,59 +4,18 @@
     <div class="text-center">
       <div class="box">
         <span style="font-size: 10vh;vertical-align: middle; padding-right: 10vw;"><strong>My Pets</strong></span>
-        <button class="button-new-appointment" >ADD NEW PET</button>
+        <button class="button-new-appointment" (click)="goToNewPet()">ADD NEW PET</button>
       </div>
       <div class="container-appointments">
-        <div class="container-appointments-item">
+        <!-- show all pets from component  -->
+        <div class="container-appointments-item" *ngFor="let pet of pets">
           <!--create an row of 2 elements-->
           <div class="row">
             <div class="col-9">
-              <span class="title-appointment"><strong>Pet Name</strong></span>
-              <span class="info-appoinment">Species: pet specie</span>
-              <span class="info-appoinment">Breed: pet breed</span>
-              <span class="info-appoinment">Size: size</span>
-            </div>
-            <div class="col-3">
-              <button class="button-see-details" >See details</button>
-            </div>
-          </div>
-        </div>
-        <div class="container-appointments-item">
-          <!--create an row of 2 elements-->
-          <div class="row">
-            <div class="col-9">
-              <span class="title-appointment"><strong>Pet Name</strong></span>
-              <span class="info-appoinment">Species: pet specie</span>
-              <span class="info-appoinment">Breed: pet breed</span>
-              <span class="info-appoinment">Size: size</span>
-            </div>
-            <div class="col-3">
-              <button class="button-see-details" >See details</button>
-            </div>
-          </div>
-        </div>
-        <div class="container-appointments-item">
-          <!--create an row of 2 elements-->
-          <div class="row">
-            <div class="col-9">
-              <span class="title-appointment"><strong>Pet Name</strong></span>
-              <span class="info-appoinment">Species: pet specie</span>
-              <span class="info-appoinment">Breed: pet breed</span>
-              <span class="info-appoinment">Size: size</span>
-            </div>
-            <div class="col-3">
-              <button class="button-see-details" >See details</button>
-            </div>
-          </div>
-        </div>
-        <div class="container-appointments-item">
-          <!--create an row of 2 elements-->
-          <div class="row">
-            <div class="col-9">
-              <span class="title-appointment"><strong>Pet Name</strong></span>
-              <span class="info-appoinment">Species: pet specie</span>
-              <span class="info-appoinment">Breed: pet breed</span>
-              <span class="info-appoinment">Size: size</span>
+              <span class="title-appointment"><strong>{{pet.Name}}</strong></span>
+              <span class="info-appoinment">Species: {{pet.Species}}</span>
+              <span class="info-appoinment">Breed: {{pet.Breed}}</span>
+              <span class="info-appoinment">Size: {{pet.Size}}</span>
             </div>
             <div class="col-3">
               <button class="button-see-details" >See details</button>

@@ -5,9 +5,9 @@
     <h1 class="text-center" style="font-size: 80px; font-family: 'Playfair Display', serif;"><strong>Hello, @{{user?.FirstName + '.' +  user?.LastName}}</strong></h1>
     <h2 class="text-center" style="color: #197278;font-size: 30px; font-family: 'Playfair Display', serif;"><strong>nice to see you there.</strong></h2>
     <div class="container-second">
-      <button class="button-item-container">See Upcoming Appointments</button>
+      <button class="button-item-container" (click)="goToUpcomingAppointments()">See Upcoming Appointments</button>
       <button class="button-item-container">See Your Last Appointments</button>
-      <button class="button-item-container">My Pets</button>
+      <button class="button-item-container" (click)="goToMyPets()">My Pets</button>
       <button class="button-item-container">Change Your Account Information</button>
     </div>
     <img src="/assets/dogcat.png"  width="30%" height="30%" alt="" style="position: absolute; bottom: 0; right: 0;">

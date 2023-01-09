@@ -17,7 +17,9 @@ export class UserService {
     })
   };
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) {
+    console.log('UserService constructor');
+  }
 
   public registerUser(dto: UserCreateDto) {
     return this.httpClient.post(this.apiURL, dto, this.httpOptions);
@@ -54,6 +56,7 @@ export class UserService {
   }
 
   public getLoggedUser() {
+    console.log('UserService getLoggedUser');
     return this.loggedUser;
   }
 

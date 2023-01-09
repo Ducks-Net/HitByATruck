@@ -7,3 +7,12 @@ export interface Pet {
   OwnerId: string,
   Size: string,
 }
+
+export interface PetCreateDto {
+  Name: string,
+  DateOfBirth: string,
+  Species: string,
+  Breed: string,
+  OwnerId: string,
+  Size: string,
+}
