@@ -14,15 +14,23 @@
       </ul>
     </div>
     <ul class="nav">
-      <li class="nav-item ml-auto" style="margin-right:10px;">
-        <a href="/sign-in"><button type="button" class="btn btn-primary ml-2" style="color:black; background-color:#D9C5B2;">Sign In</button></a>
-      </li>
-      <li class="nav-item ml-auto" style="margin-right:10px;">
-        <a href="/sign-up"><button type="button" class="btn btn-primary ml-2" style="color:black; background-color:#D9C5B2;">Sign Up</button></a>
-      </li>
-      <li class="nav-item ml-auto" style="margin-right:10px;">
-       <a href="/clinics"> <button type="button" class="btn btn-primary ml-2" style="color:black; background-color:#D9C5B2;">Our Clinics</button></a>
-      </li>
+      <div *ngIf="!isLoggedIn(); then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>
+        <li class="nav-item ml-auto" style="margin-right:10px;">
+          <button (click)="goToSignIn()" type="button" class="btn btn-primary ml-2" style="color:black; background-color:#D9C5B2;">Sign In</button>
+        </li>
+        <li class="nav-item ml-auto" style="margin-right:10px;">
+          <button (click)="goToSignUp()" type="button" class="btn btn-primary ml-2" style="color:black; background-color:#D9C5B2;">Sign Up</button>
+        </li>
+        <li class="nav-item ml-auto" style="margin-right:10px;">
+          <button (click)="goToClinics()" type="button" class="btn btn-primary ml-2" style="color:black; background-color:#D9C5B2;">Our Clinics</button>
+        </li>
+      </ng-template>
+      <ng-template #elseBlock>
+        <li class="nav-item ml-auto" style="margin-right:10px;">
+          <button (click)="logout()" type="button" class="btn btn-primary ml-2" style="color:black; background-color:#D9C5B2;">Sign Out</button>
+        </li>
+      </ng-template>
     </ul>
   </div>
 </nav>

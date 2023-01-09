@@ -10,6 +10,7 @@ import { User, UserCreateDto, UserLoginDto } from './user';
 })
 export class UserService {
   loggedUser: User | undefined = undefined;
+  onLogAction: Function | undefined = undefined;
   apiURL = StringsService.getBaseUrl() + 'api/v1/users';
   httpOptions = {
     headers: new HttpHeaders({
@@ -49,10 +50,17 @@ export class UserService {
           Address: users[i].address,
           PhoneNumber: users[i].phoneNumber,
         }
+        this.onLogAction?.();
         return true;
       }
     }
+    this.onLogAction?.();
     return false;
+  }
+
+  public logout() {
+    this.loggedUser = undefined;
+    this.onLogAction?.();
   }
 
   public getLoggedUser() {
