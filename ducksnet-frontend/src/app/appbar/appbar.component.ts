@@ -44,4 +44,11 @@ export class AppbarComponent {
         this.router.navigate(['/clinics']);
     }
 
+    public goToApiShow(): void {
+        this.router.navigate(['/api-show']);
+    }
+
+    public goToHomepage(): void {
+        this.router.navigate(['/homepage']);
+    }
 }
